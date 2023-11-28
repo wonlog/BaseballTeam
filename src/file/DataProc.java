@@ -44,9 +44,10 @@ public class DataProc {
   }
 
   public String[] dataLoad() {
-    BufferedReader br;
+
+    String datas[] = null;
     try {
-      br = new BufferedReader(new FileReader(file));
+      BufferedReader br = new BufferedReader(new FileReader(file));
 
       // 데이터의 개수
       int count = 0;
@@ -57,7 +58,7 @@ public class DataProc {
       br.close();
 
       // 배열할당
-      String datas[] = new String[count];
+      datas = new String[count];
 
       br = new BufferedReader(new FileReader(file));
 
@@ -72,6 +73,7 @@ public class DataProc {
     } catch (Exception e) {
       e.printStackTrace();
     }
+    return datas;
 
   }
 }

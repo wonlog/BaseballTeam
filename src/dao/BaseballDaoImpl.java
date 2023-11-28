@@ -345,8 +345,10 @@ public class BaseballDaoImpl implements BaseballDao {
             Integer.parseInt(data[5]), Integer.parseInt(data[6]), Integer.parseInt(data[7]));
       }
     }
-    
-    counter
+
+    counter = datas.length;
+
+    System.out.println("데이터를 로드하였습니다");
   }
 
   public int search(String name) {
